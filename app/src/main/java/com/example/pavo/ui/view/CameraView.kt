@@ -205,8 +205,6 @@ class BoundingBoxOverlay(context: Context, attrs: AttributeSet? = null) : View(c
     }
 }
 
-data class Box(val box: RectF, val text: String)
-
 fun ImageProxy.toBitmap(): Bitmap {
     val buffer = planes[0].buffer
     val bytes = ByteArray(buffer.remaining())
