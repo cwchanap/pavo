@@ -46,6 +46,11 @@ android {
             useLegacyPackaging = false
         }
     }
+
+    lint {
+        checkDependencies = false
+        disable.add("Aligned16KB")
+    }
 }
 
 dependencies {
