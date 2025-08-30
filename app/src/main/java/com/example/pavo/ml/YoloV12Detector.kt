@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.RectF
 import android.util.Log
+import androidx.core.graphics.scale
 import com.example.pavo.ui.view.Box
 import org.tensorflow.lite.Interpreter
 import org.tensorflow.lite.gpu.CompatibilityList
@@ -70,7 +71,7 @@ class YoloV12Detector(private val context: Context) {
         
         return try {
             // Preprocess image
-            val resizedBitmap = Bitmap.createScaledBitmap(bitmap, inputSize, inputSize, true)
+            val resizedBitmap = bitmap.scale(inputSize, inputSize, true)
             val inputBuffer = convertBitmapToByteBuffer(resizedBitmap)
             
             // Prepare output buffer
