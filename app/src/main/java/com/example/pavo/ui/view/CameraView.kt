@@ -35,7 +35,7 @@ import com.example.pavo.ml.YoloV12Detector
 
 @OptIn(ExperimentalPermissionsApi::class)
 @Composable
-fun CameraView() {
+fun CameraView(modifier: Modifier = Modifier) {
     val context = LocalContext.current
     val lifecycleOwner = LocalLifecycleOwner.current
     val cameraPermissionState = rememberPermissionState(Manifest.permission.CAMERA)
@@ -64,7 +64,7 @@ fun CameraView() {
     }
 
     if (cameraPermissionState.status == PermissionStatus.Granted) {
-        Box(modifier = Modifier.fillMaxSize()) {
+        Box(modifier = modifier.fillMaxSize()) {
             AndroidView(
                 factory = { previewView },
                 modifier = Modifier.fillMaxSize()

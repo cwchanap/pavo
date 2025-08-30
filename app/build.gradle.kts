@@ -63,8 +63,6 @@ dependencies {
     implementation(libs.androidx.camera.camera.camera2)
     implementation(libs.androidx.camera.camera.lifecycle)
     implementation(libs.androidx.camera.view)
-    implementation(libs.litert)
-    implementation(libs.litert.gpu)
     // Keep TensorFlow Lite for backward compatibility
     implementation(libs.tensorflow.lite)
     implementation(libs.tensorflow.lite.gpu)
