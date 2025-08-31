@@ -1,0 +1,13 @@
+# Core dependencies for YOLO to TFLite conversion using ai-edge-torch
+torch>=2.4.0,<2.7.0  # ai-edge-torch requires torch < 2.7.0
+torchvision
+ultralytics
+tensorflow==2.19.*  # Compatible with ai-edge-torch 0.4.0
+ai-edge-torch==0.4.0  # Use specific version that's compatible with TF 2.19
+numpy
+pillow
+
+# ONNX conversion dependencies
+onnx
+tf2onnx
+onnx-tf

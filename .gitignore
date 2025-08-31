@@ -13,3 +13,20 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Log files
+*.log
+
+# Model files
+*.pt
+*.onnx
+*.tflite
+
+# Heap dump files
+*.hprof
+
+# Lock files
+*.lock
+
+# Python version files
+.python-version
