@@ -21,6 +21,7 @@ local.properties
 *.pt
 *.onnx
 *.tflite
+*.npy
 
 # Heap dump files
 *.hprof

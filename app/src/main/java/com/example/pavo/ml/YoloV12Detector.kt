@@ -5,7 +5,6 @@ import android.graphics.Bitmap
 import android.graphics.RectF
 import android.util.Log
 import androidx.core.graphics.scale
-import com.example.pavo.ui.view.Box
 import org.tensorflow.lite.Interpreter
 import org.tensorflow.lite.gpu.CompatibilityList
 import org.tensorflow.lite.gpu.GpuDelegate
@@ -14,6 +13,8 @@ import java.nio.ByteBuffer
 import java.nio.ByteOrder
 import java.nio.MappedByteBuffer
 import java.nio.channels.FileChannel
+
+data class Box(val box: RectF, val text: String)
 
 class YoloV12Detector(private val context: Context) {
     
@@ -25,7 +26,7 @@ class YoloV12Detector(private val context: Context) {
     
     companion object {
         private const val TAG = "YoloV12Detector"
-        private const val MODEL_NAME = "yolov12.tflite"
+        private const val MODEL_NAME = "yolo.tflite"
         
         val cocoLabels = listOf(
             "person", "bicycle", "car", "motorcycle", "airplane", "bus", "train", "truck", "boat", "traffic light",
